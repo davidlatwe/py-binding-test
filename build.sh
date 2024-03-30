@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
-NANOBIND=0
-CLEAN=0
-BUILD_TYPE="Release"
-
 NANOBIND=${1:-$NANOBIND}
 CLEAN=${2:-$CLEAN}
+BUILD_TYPE="Release"
 
 scriptroot=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
