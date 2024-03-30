@@ -20,3 +20,8 @@ CLEAN=1 NANOBIND=0 ./build.sh
 ```bash
 ./build.ps1 -clean 1 -nanobind 0
 ```
+
+
+### Discussion
+
+See https://github.com/wjakob/nanobind/discussions/499
