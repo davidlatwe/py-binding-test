@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.15)
 project(
     PythonBindingTest
     VERSION 0.1.0
@@ -6,14 +6,13 @@ project(
     DESCRIPTION "Python binding test"
 )
 
-find_package(Python 3.10 COMPONENTS Development.Module REQUIRED)
-
 set(SRC
     src/library.cpp
     src/binding.cpp
 )
 if (USE_NANOBIND)
     # nanobind
+    find_package(Python 3.8 COMPONENTS Interpreter Development.Module REQUIRED)
     add_subdirectory(external/nanobind EXCLUDE_FROM_ALL)
     nanobind_add_module(example ${SRC})
     target_compile_definitions(example PRIVATE -DUSE_NANOBIND)
